@@ -1,0 +1,935 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  a {
+    color: #2c5282;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #1a365d;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Header Styles */
+  .header {
+    background-color: #2c5282;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+  
+  .logo p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    opacity: 0.8;
+  }
+  
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .main-nav li {
+    margin-left: 1.5rem;
+  }
+  
+  .main-nav a {
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+  }
+  
+  .main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s;
+  }
+  
+  .main-nav a:hover::after {
+    width: 100%;
+  }
+  
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #4299e1;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero .tagline {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  .hero .description {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    opacity: 0.9;
+  }
+  
+  /* Section Styling */
+  section {
+    padding: 4rem 0;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c5282;
+  }
+  
+  .service-section {
+    background-color: white;
+  }
+  
+  .result-section {
+    background-color: #e6f7ff;
+    padding: 3rem 0;
+  }
+  
+  .recommendations-section {
+    background-color: #f0f5ff;
+  }
+  
+  .faq-section {
+    background-color: white;
+  }
+  
+  .contact-section {
+    background-color: #f8f9fa;
+  }
+  
+  /* Form Styling */
+  .choice-form-container, .contact-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .choice-form h3, .contact-form h3 {
+    margin-bottom: 1rem;
+    color: #2c5282;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cfd8e3;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2);
+  }
+  
+  .required {
+    color: #e53e3e;
+  }
+  
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2c5282;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #1a365d;
+  }
+  
+  .disclaimer, .privacy-notice {
+    font-size: 0.85rem;
+    color: #718096;
+    margin-top: 1rem;
+  }
+  
+  .error-message {
+    color: #e53e3e;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Result Styling */
+  .result-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .loading {
+    padding: 2rem 0;
+  }
+  
+  .spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(66, 153, 225, 0.3);
+    border-radius: 50%;
+    border-top-color: #4299e1;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loading-message {
+    color: #718096;
+    font-size: 0.9rem;
+  }
+  
+  .result-box {
+    padding: 2rem;
+    background-color: #ebf8ff;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .result-choice {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c5282;
+    margin: 1rem 0;
+  }
+  
+  .result-message {
+    color: #4a5568;
+  }
+  
+  .reset-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #2c5282;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .reset-button:hover {
+    background-color: #1a365d;
+  }
+  
+  .testimonial {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    font-style: italic;
+  }
+  
+  .testimonial-author {
+    font-style: normal;
+    font-weight: 500;
+    text-align: right;
+  }
+  
+  /* FAQ Styling */
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .faq-question {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .faq-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .faq-toggle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #4a5568;
+  }
+  
+  .faq-answer {
+    padding: 1rem;
+    background-color: white;
+  }
+  
+  /* Recommendations Styling */
+  .recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .recommendation-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .recommendation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recommendation-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .recommendation-card h3 {
+    margin-bottom: 0.5rem;
+    color: #2c5282;
+  }
+  
+  /* Contact Info Styling */
+  .contact-info {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f7fafc;
+    border-radius: 8px;
+  }
+  
+  .contact-info h4 {
+    color: #2c5282;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Success Message */
+  .success-message {
+    text-align: center;
+    padding: 2rem;
+    background-color: #c6f6d5;
+    border-radius: 8px;
+  }
+  
+  .success-message h3 {
+    color: #2f855a;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background-color: #2d3748;
+    color: white;
+    padding: 3rem 0 1.5rem;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-section h3, .footer-section h4 {
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-section p {
+    color: #cbd5e0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section a {
+    color: #cbd5e0;
+  }
+  
+  .footer-section a:hover {
+    color: white;
+  }
+  
+  .copyright {
+    padding-top: 1.5rem;
+    border-top: 1px solid #4a5568;
+    text-align: center;
+    color: #a0aec0;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .logo {
+      margin-bottom: 1rem;
+    }
+    
+    .mobile-menu-button {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    
+    .main-nav {
+      display: none;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    
+    .main-nav.open {
+      display: block;
+    }
+    
+    .main-nav ul {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .main-nav li {
+      margin: 0;
+      margin-bottom: 0.5rem;
+    }
+    
+    .recommendations-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    section {
+      padding: 2rem 0;
+    }
+    
+    .choice-form-container, .contact-form-container, .result-container {
+      padding: 1.5rem;
+    }
+  }
+  /* 既存のスタイルに追加するスクロール関連のスタイル */
+
+html {
+  scroll-behavior: smooth; /* ブラウザ全体にスムーズスクロールを適用 */
+  scroll-padding-top: 80px; /* ヘッダーの高さ分だけスクロール位置を調整 */
+}
+
+/* セクション間の視覚的な区切りを強化 */
+section {
+  padding: 4rem 0;
+  position: relative; /* IDによるスクロール位置のターゲットになるために必要 */
+}
+
+/* アクティブなナビゲーションリンクのスタイル */
+.main-nav a.active {
+  font-weight: 700;
+}
+
+.main-nav a.active::after {
+  width: 100%;
+}
+
+/* ナビゲーションリンクのホバー効果を強化 */
+.main-nav a:hover {
+  color: #ebf8ff;
+}
+
+/* フッターのナビゲーションリンクもスタイル統一 */
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+/* ===== 料金セクション ===== */
+.pricing {
+  background-color: #fff;
+}
+
+.pricing-content {
+  display: flex;
+  justify-content: center;
+}
+
+.price-card {
+  background-color: var(--gray-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.price-card h3 {
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.amount {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.currency {
+  font-size: 1.5rem;
+  vertical-align: super;
+}
+
+.discount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--highlight-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  transform: rotate(15deg);
+}
+
+.actual-price {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: rgba(40, 167, 69, 0.1);
+  border-radius: 8px;
+}
+
+.free-price {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--success-color);
+}
+
+.free-price span {
+  font-size: 1.5rem;
+  vertical-align: super;
+}
+
+.price-note {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.user-type-selection h4 {
+  margin-bottom: 1rem;
+}
+
+.user-types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.user-type-btn {
+  padding: 0.75rem 1rem;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-type-btn:hover {
+  background-color: var(--gray-bg);
+}
+
+.user-type-btn.selected {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.selected-type {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(40, 167, 69, 0.1);
+  border-radius: 8px;
+}
+
+.selected-type strong {
+  color: var(--success-color);
+}
+
+/* 全体コンテナ */
+.decision-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* セクションの余白 */
+.decision-container section {
+  margin-bottom: 2rem;
+}
+
+/* セクション見出し */
+.decision-container h2 {
+  font-size: 1.5rem;
+  color: #002244;
+  border-bottom: 2px solid #002244;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ライフスタイル選択 */
+.lifestyle-section select {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none;
+  background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23666' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+  background-size: 10px 6px;
+  margin-bottom: 1rem;
+}
+
+/* 応援メッセージ */
+.lifestyle-message {
+  font-size: 1rem;
+  color: #004080;
+  background: #f0f8ff;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #004080;
+  border-radius: 4px;
+}
+
+/* 選択フォーム */
+.choice-section input[type="text"] {
+  width: calc(50% - 0.5rem);
+  padding: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.choice-section input[type="text"]:last-child {
+  margin-right: 0;
+}
+
+.choice-section button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  color: #fff;
+  background: #002244;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.choice-section button:hover {
+  background: #003366;
+}
+
+/* 結果表示 */
+.result-section {
+  text-align: center;
+}
+
+.result-section h3 {
+  font-size: 1.25rem;
+  color: #002244;
+  margin-bottom: 0.5rem;
+}
+
+.result-section .result {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+/* リセットボタンがResultコンポーネント内にある場合、そのスタイルも調整 */
+.result-section button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #002244;
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.result-section button:hover {
+  background: #d5d5d5;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .choice-section input[type="text"] {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+/* src/styles/global.css などに追加 */
+
+.button {
+  display: inline-block;
+  background-color: #ff6600;       /* コントラストの強いオレンジ系 */
+  color: #fff;                     /* 文字は白 */
+  font-size: 1.25rem;              /* 少し大きめの文字 */
+  font-weight: bold;               /* 強調 */
+  padding: 0.75rem 1.5rem;         /* ボタンらしい余白 */
+  border: none;
+  border-radius: 8px;              /* 角を丸く */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);  /* ふわっとした影 */
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+/* ホバー・フォーカス時の効果 */
+.button:hover,
+.button:focus {
+  transform: translateY(-2px);      /* ほんの少し浮き上がる */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  background-color: #e65500;        /* 少し濃いめに */
+}
+
+/* モバイル時に幅いっぱいに広げる（任意） */
+@media (max-width: 600px) {
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ボタンを含む親要素を中央揃えにする */
+.service {
+  display: flex;
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center;     /* 縦方向の中央揃え */
+  height: 100vh;           /* 親要素の高さを100%にして中央に配置 */
+}
+
+/* サービス内容セクション */
+.service-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin: 50px 0;
+}
+
+.service-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.service-section p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.step {
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4caf50;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .steps-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .step {
+    width: 100%;
+  }
+}
+
+.special-message {
+  background-color: #fff6f0; /* 優しいオレンジ色 */
+  color: #f59e42; /* 落ち着いたオレンジ色のテキスト */
+  border: 2px solid #f59e42; /* オレンジ色の境界線 */
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 15px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.special-message:hover {
+  background-color: #fef0d5; /* さらに明るい黄色オレンジに変化 */
+  color: #f39c12; /* 少し明るいオレンジに変化 */
+  border-color: #f39c12; /* 境界線色変更 */
+}
